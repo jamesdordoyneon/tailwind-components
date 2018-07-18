@@ -15,6 +15,7 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('home-component', require('./components/Index.vue'));
 Vue.component('daterange-picker', require('./components/DateRangePicker.vue'));
 
 const app = new Vue({
