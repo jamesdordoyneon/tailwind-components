@@ -14,10 +14,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-brand-lightest font-sans font-normal">
-    <div>
+
+    <div id="app">
         <div class="my-12 text-white">
             <h1 class="text-5xl font-light mb-4">
-                <grid-icon class="h-8 w-8"></grid-icon>
+
                 Dashboard
             </h1>
             <h1 class="text-xl font-light">Welcome back, Erik</h1>
@@ -58,21 +59,20 @@
                         <div>
                             <div class="flex flex-no-wrap justify-between items-center">
                                 <h1 class="text-5xl text-grey-darkest font-light mb-2">1.952</h1>
-                                <trending-up-icon class="text-green mx-1"></trending-up-icon>
                                 <span class="text-grey-dark">(25%)</span>
                             </div>
                             <span class="text-grey-darker uppercase tracking-wide">Page views this month</span>
                         </div>
                         <div>
-                            <div class="flex flex-no-wrap justify-between items-center">
-                                <h1 class="text-5xl text-grey-darkest font-light mb-2">118</h1>
-                                <trending-down-icon class="text-red mx-1"></trending-down-icon>
-                                <span class="text-grey-dark">(-13%)</span>
-                            </div>
-                            <span class="text-grey-darker uppercase tracking-wide">Page views today</span>
+                            <daterange-picker
+                                double
+                                start-date="06/10/2017"
+                                end-date="06/10/2018"
+                                start-place-holders="12/01/2017"
+                                end-place-holders="04/01/2018"
+                                @get-dates="getDates"/>
                         </div>
                     </div>
-                    <line-chart :height="200" :minimalist="true" :data="chart"></line-chart>
                 </div>
             </div>
             <div class="w-full md:w-1/2 xl:w-1/4">
@@ -84,7 +84,6 @@
                         </h1>
                         <span class="text-grey-darker uppercase tracking-wide">Storage used</span>
                     </div>
-                    <progress-bar :progress="65"></progress-bar>
                 </div>
             </div>
             <div class="w-full md:w-1/2 xl:w-1/4">
@@ -96,7 +95,6 @@
                         </h1>
                         <span class="text-grey-darker uppercase tracking-wide">Ram usage</span>
                     </div>
-                    <progress-bar :progress="21"></progress-bar>
                 </div>
             </div>
             <div class="w-full md:w-1/2 xl:w-1/4">
@@ -108,7 +106,6 @@
                         </h1>
                         <span class="text-grey-darker uppercase tracking-wide">CPU load</span>
                     </div>
-                    <progress-bar :progress="88"></progress-bar>
                 </div>
             </div>
             <div class="w-full md:w-1/2 xl:w-1/4">
@@ -120,11 +117,12 @@
                         </h1>
                         <span class="text-grey-darker uppercase tracking-wide">Bandwidth used</span>
                     </div>
-                    <progress-bar :progress="72"></progress-bar>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <script src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
