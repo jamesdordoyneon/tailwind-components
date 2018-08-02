@@ -66,6 +66,7 @@ header h1 {
 
 .content {
     @apply bg-blue-lightest py-6 px-6;
+    border-top: 3px solid #ccc;
 }
 
 .card-icon{

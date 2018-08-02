@@ -47821,6 +47821,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
@@ -47878,7 +47893,53 @@ var staticRenderFns = [
       _c("div", { staticClass: "side-bar-navigation" }, [
         _c("p", { staticClass: "block bg-black" }, [_vm._v("Navigation")]),
         _vm._v(" "),
-        _c("hr")
+        _c("hr"),
+        _vm._v(" "),
+        _c("ul", { staticClass: "list-reset" }, [
+          _c("li", { staticClass: "mr-6 w-full block p-6 text-center" }, [
+            _c(
+              "a",
+              {
+                staticClass: "text-blue hover:text-blue-darker",
+                attrs: { href: "#" }
+              },
+              [_vm._v("Active")]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "mr-6 w-full block p-6 text-center" }, [
+            _c(
+              "a",
+              {
+                staticClass: "text-blue hover:text-blue-darker",
+                attrs: { href: "#" }
+              },
+              [_vm._v("Link")]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "mr-6 w-full block p-6 text-center" }, [
+            _c(
+              "a",
+              {
+                staticClass: "text-blue hover:text-blue-darker",
+                attrs: { href: "#" }
+              },
+              [_vm._v("Link")]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "mr-6 w-full block p-6 text-center" }, [
+            _c(
+              "a",
+              {
+                staticClass: "text-grey-light cursor-not-allowed",
+                attrs: { href: "#" }
+              },
+              [_vm._v("Disabled")]
+            )
+          ])
+        ])
       ])
     ])
   }

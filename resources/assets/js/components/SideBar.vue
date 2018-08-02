@@ -19,6 +19,21 @@
         <div class="side-bar-navigation">
             <p class="block bg-black">Navigation</p>
             <hr>
+            <ul class="list-reset">
+                <li class="mr-6 w-full block p-6 text-center">
+                    <a class="text-blue hover:text-blue-darker" href="#">Active</a>
+                </li>
+                <li class="mr-6 w-full block p-6 text-center">
+                    <a class="text-blue hover:text-blue-darker" href="#">Link</a>
+                </li>
+                <li class="mr-6 w-full block p-6 text-center">
+                    <a class="text-blue hover:text-blue-darker" href="#">Link</a>
+                </li>
+                <li class="mr-6 w-full block p-6 text-center">
+                    <a class="text-grey-light cursor-not-allowed" href="#">Disabled</a>
+                </li>
+            </ul>
+
         </div>
     </div>
 </template>
