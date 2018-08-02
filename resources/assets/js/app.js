@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('home-component', require('./components/Index.vue'));
+Vue.component('side-bar-component', require('./components/SideBar.vue'));
 Vue.component('daterange-picker', require('./components/DateRangePicker.vue'));
 
 const app = new Vue({

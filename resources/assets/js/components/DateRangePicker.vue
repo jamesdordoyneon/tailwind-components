@@ -34,14 +34,15 @@
             </tr>
           </thead>
           <tbody>
-            <template v-for="weeks in leftCal">
-              <tr>
-                <td v-for="(day, index) in weeks"
-                    :key="index"
-                    @click.stop="dayClick(day)"
-                    @mouseover="getPotentialDate(day)"
-                    class="cursor-pointer"
-                    :class="createDayClass(day)" >
+            <template v-for="(weeks, index) in leftCal">
+              <tr :key="'start_week' + index">
+                <td
+                  v-for="(day, index) in weeks"
+                  :key="index"
+                  @click.stop="dayClick(day)"
+                  @mouseover="getPotentialDate(day)"
+                  class="cursor-pointer"
+                  :class="createDayClass(day)" >
                     {{day && day.date()}}
                 </td>
               </tr>
@@ -59,8 +60,8 @@
             </tr>
           </thead>
           <tbody>
-            <template v-for="weeks in rightCal">
-              <tr>
+            <template v-for="(weeks, index) in rightCal">
+              <tr :key="'end_week' + index">
                 <td v-for="(day, index) in weeks"
                     :key="index"
                     @click.stop="dayClick(day)"
@@ -288,7 +289,7 @@
 </script>
 
 <style scoped>
-.daterange-picker {
+  .daterange-picker {
     position: relative;
     display: inline-flex;
     flex-direction: column;
